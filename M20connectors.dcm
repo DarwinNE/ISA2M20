@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Conn_02x40_Odd_Even
+D Generic connector, double row, 02x40, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_02x50_Odd_Even
+D M20 expansion connector, double row, 02x50, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers)
+K connector M20
+F ~
+$ENDCMP
+#
+#End Doc Library
