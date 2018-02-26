@@ -1467,7 +1467,7 @@ Text GLabel 2800 8900 0    52   Input ~ 0
 A11
 Text GLabel 2800 9000 0    52   Input ~ 0
 A10
-Text GLabel 2800 9100 0    52   Input ~ 0
+Text GLabel 1700 9100 0    52   Input ~ 0
 A9
 Text GLabel 2800 9200 0    52   Input ~ 0
 A8
@@ -1813,10 +1813,10 @@ F 3 "" H 14400 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM7905_TO220 U13
+L LM7905_TO220 U12
 U 1 1 5A9C5DFB
 P 17250 1900
-F 0 "U13" H 17100 1775 50  0000 C CNN
+F 0 "U12" H 17100 1775 50  0000 C CNN
 F 1 "LM7905_TO220" H 17250 1775 50  0000 L CNN
 F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 17250 1700 50  0001 C CIN
 F 3 "" H 17250 1900 50  0001 C CNN
@@ -1863,10 +1863,10 @@ $EndComp
 Text GLabel 2800 10300 0    52   Input ~ 0
 *IOW
 $Comp
-L 74LS373 U12
+L 74LS373 U11
 U 1 1 5A9EB888
 P 6300 10000
-F 0 "U12" H 6300 10000 50  0000 C CNN
+F 0 "U11" H 6300 10000 50  0000 C CNN
 F 1 "74LS373" H 6350 9650 50  0000 C CNN
 F 2 "Housings_DIP:DIP-20_W7.62mm_Socket_LongPads" H 6300 10000 50  0001 C CNN
 F 3 "" H 6300 10000 50  0001 C CNN
@@ -1881,8 +1881,8 @@ Text Notes 9850 3600 0    52   ~ 0
 D1 lights for every I/O access\nD2 lights only for the SRAM access
 Text Notes 4750 9300 0    52   ~ 0
 U12 stores the 6 MSB's to transfer on the ISA side for the address.\nIt is active only when there is a SRAM access as I/O access does not\nrequire addressess in such a high range.
-Text Notes 2250 10800 0    52   ~ 0
-Address decoding and activation on I/O write for the memory \nconfiguration port of the adapter. It points on port address \n0x7F11 on the M20 side.
+Text Notes 2250 10950 0    52   ~ 0
+Address decoding and activation on I/O write for the memory \nconfiguration port of the adapter. It points on port address \n0x7D81 on the M20 side. I have chosen this as even if only 10 bits\nare decoded by the ISA board, that maps to 0x180 that should not\nbe used by any board I know of.
 $Comp
 L R R10
 U 1 1 5AA1B975
@@ -2473,4 +2473,35 @@ $EndComp
 Wire Wire Line
 	7950 10250 7950 9500
 Connection ~ 7950 9500
+Text GLabel 14150 2600 2    52   Input ~ 0
+AEN
+Wire Wire Line
+	13450 2600 14150 2600
+Connection ~ 14050 2600
+Wire Wire Line
+	14050 2600 14050 2800
+$Comp
+L GND #PWR?
+U 1 1 5AA54769
+P 14050 2800
+F 0 "#PWR?" H 14050 2550 50  0001 C CNN
+F 1 "GND" H 14050 2650 50  0000 C CNN
+F 2 "" H 14050 2800 50  0001 C CNN
+F 3 "" H 14050 2800 50  0001 C CNN
+	1    14050 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LS04 U6
+U 5 1 5AA5BA39
+P 2150 9100
+F 0 "U6" H 2345 9215 50  0000 C CNN
+F 1 "74LS04" H 2340 8975 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm_Socket_LongPads" H 2150 9100 50  0001 C CNN
+F 3 "" H 2150 9100 50  0001 C CNN
+	5    2150 9100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 9100 2800 9100
 $EndSCHEMATC
