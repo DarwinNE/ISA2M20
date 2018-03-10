@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name connectors)(type KiCad)(uri "$(KIPRJMOD)/connectors.pretty")(options "")(descr ""))
+  (lib (name OPENHARDWARE)(type Legacy)(uri "$(KIPRJMOD)/Open-Source-Hardware-Logos-for-Kicad-master/OPENHARDWARE.mod")(options "")(descr ""))
 )

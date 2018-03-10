@@ -29,6 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:isa2m20-cache
 EELAYER 25 0
 EELAYER END
 $Descr A2 23386 16535
@@ -2057,8 +2058,6 @@ F 3 "" H 7950 10550 50  0001 C CNN
 	1    7950 10550
 	1    0    0    -1  
 $EndComp
-Text GLabel 14150 2600 2    52   Input ~ 0
-AEN
 $Comp
 L GND #PWR066
 U 1 1 5AA54769
@@ -2580,4 +2579,6 @@ F 3 "" H 4650 9050 50  0001 C CNN
 	1    4650 9050
 	1    0    0    -1  
 $EndComp
+Text Notes 13800 2600 0    52   ~ 0
+AEN
 $EndSCHEMATC
